@@ -1,0 +1,30 @@
+{
+  "project": "05-digits-mlp",
+  "seed": 42,
+  "data_source": "sklearn.datasets.load_digits; 1797 offline 8x8 handwritten-digit images; UCI Optical Recognition of Handwritten Digits",
+  "split": {
+    "train": 1347,
+    "test": 450,
+    "stratified": true
+  },
+  "metrics": {
+    "dummy_majority": {
+      "accuracy": 0.10222222222222223,
+      "macro_f1": 0.018548387096774192
+    },
+    "logistic_regression": {
+      "accuracy": 0.9777777777777777,
+      "macro_f1": 0.9776411985388958
+    },
+    "mlp": {
+      "accuracy": 0.9755555555555555,
+      "macro_f1": 0.9755377884369884
+    }
+  },
+  "training": {
+    "epochs": 87,
+    "hidden_units": 64,
+    "early_stopping": true
+  },
+  "limitations": "Random image split is not a writer-independent split; test labels are used only for final evaluation and error analysis."
+}
